@@ -23,5 +23,9 @@ echo "PRO_PORT			:$PRO_PORT"
 . ./deployement_1.sh
 
 
+
+
+
+
 # bash jenkins_1.sh 'Exicom' 'Xfusion_auth' '192.168.1.75' 'root' 'Ttpl@123' '3307'
 # bash jenkins_1.sh project_name module_name pro_ip pro_user pro_pass pro_port
