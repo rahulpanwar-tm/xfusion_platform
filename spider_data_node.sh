@@ -52,7 +52,7 @@ done; echo ''
 # done; echo ''
 
 
-if [ "${array_pro[1]}" == "xfusion_spider_platform" ]
+elif [ "${array_pro[1]}" == "xfusion_spider_platform" ]
 then
   echo "Hello Patform deployement"
 else
