@@ -43,14 +43,14 @@ sed -i "s/xfusion_performance_data_node_1/${array_node[m]}/g" /home/ttpl/.jenkin
 echo "${array_pro[0]}" "${array_pro[1]}" "${array_ip[j]}" "${array_user[j]}" "${array_Password[j]}" "${array_port[j]}" "${array_pro[2]}" "${array_pro[3]}" "${array_pro[4]}"
 echo "Rahul Panwar"
 . ./jenkins_1.sh "${array_pro[0]}" "${array_pro[1]}" "${array_ip[j]}" "${array_user[j]}" "${array_Password[j]}" "${array_port[j]}" "${array_pro[2]}" "${array_pro[3]}" "${array_pro[4]}"
- 
+
 fi
 done; echo ''
 # for ((j=0;j<=${#array_ip[@]}-1;j++)); do
 # . ./jenkins_1.sh "$8" "$9" "${array_ip[j]}" "${array_user[j]}" "${array_Password[j]}" "${array_port[j]}" "$10" "$11" "$12"
 # mysql -u"${array_user[j]}" --port "${array_port[j]}"  -p"${array_Password[j]}" -c -h "$5" -e "show databases;";
 # done; echo ''
-
+mysql -u$PRO_USERID --port $PRO_PORT  -p$PRO_PASSWORD -c -h $PROD_IPADDRESS -e "truncate mysql.spider_tables;" 
 
 elif [ "${array_pro[1]}" == "xfusion_spider_platform" ]
 then
